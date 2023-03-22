@@ -29,29 +29,7 @@ class _ImageCarouselWidgetState extends State<ImageCarouselWidget> {
       height: 235.h,
       child: Stack(
         children: [
-          CarouselSlider(
-            options: CarouselOptions(
-              height: 235.h,
-              viewportFraction: 1,
-              onPageChanged: onPageChange,
-              enableInfiniteScroll: false,
-            ),
-            items: widget.images.map((image) {
-              return Builder(
-                builder: (BuildContext context) {
-                  return Container(
-                    margin: EdgeInsets.symmetric(horizontal: 14.w),
-                    child: Image.asset(
-                      image,
-                      width: MediaQuery.of(context).size.width,
-                      height: 235.h,
-                      fit: BoxFit.fill,
-                    ),
-                  );
-                },
-              );
-            }).toList(),
-          ),
+          _CarouselSWidget(images: widget.images, onPageChange: onPageChange),
           Align(
             alignment: Alignment.bottomCenter,
             child: AmountIndicatorWidget(
@@ -61,6 +39,44 @@ class _ImageCarouselWidgetState extends State<ImageCarouselWidget> {
           ),
         ],
       ),
+    );
+  }
+}
+
+/// виджет показа карусели изображений
+class _CarouselSWidget extends StatelessWidget {
+  const _CarouselSWidget({
+    required this.images,
+    required this.onPageChange,
+    Key? key,
+  }) : super(key: key);
+  final List<String> images;
+  final dynamic Function(int, CarouselPageChangedReason) onPageChange;
+
+  @override
+  Widget build(BuildContext context) {
+    return CarouselSlider(
+      options: CarouselOptions(
+        height: 235.h,
+        viewportFraction: 1,
+        onPageChanged: onPageChange,
+        enableInfiniteScroll: false,
+      ),
+      items: images.map((image) {
+        return Builder(
+          builder: (BuildContext context) {
+            return Container(
+              margin: EdgeInsets.symmetric(horizontal: 14.w),
+              child: Image.asset(
+                image,
+                width: MediaQuery.of(context).size.width,
+                height: 235.h,
+                fit: BoxFit.fill,
+              ),
+            );
+          },
+        );
+      }).toList(),
     );
   }
 }

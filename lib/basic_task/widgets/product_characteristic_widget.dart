@@ -43,19 +43,9 @@ class ProductCharacteristicWidget extends StatelessWidget {
               style:
                   ProjectStyles.regularGreyOpenSans.copyWith(fontSize: 12.sp),
             ),
-            CharacteristicCardWidget(
-              svgPath: ProjectIcons.iFloor,
-              title: ProjectStrings.Floor,
-              info: floorInfo,
-            ),
-            CharacteristicCardWidget(
-                svgPath: ProjectIcons.iRoof,
-                title: ProjectStrings.Roof,
-                info: roofInfo),
-            CharacteristicCardWidget(
-                svgPath: ProjectIcons.iRepair,
-                title: ProjectStrings.Repair,
-                info: repairInfo),
+            _FloorCardWidget(floorInfo: floorInfo),
+            _RoofCardWidget(roofInfo: roofInfo),
+            _RepairCardWidget(repairInfo: repairInfo),
             SizedBox(
               height: 7.h,
             ),
@@ -64,5 +54,46 @@ class ProductCharacteristicWidget extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+class _FloorCardWidget extends StatelessWidget {
+  const _FloorCardWidget({required this.floorInfo, Key? key}) : super(key: key);
+  final String floorInfo;
+
+  @override
+  Widget build(BuildContext context) {
+    return CharacteristicCardWidget(
+      svgPath: ProjectIcons.iFloor,
+      title: ProjectStrings.Floor,
+      info: floorInfo,
+    );
+  }
+}
+
+class _RoofCardWidget extends StatelessWidget {
+  const _RoofCardWidget({required this.roofInfo, Key? key}) : super(key: key);
+  final String roofInfo;
+
+  @override
+  Widget build(BuildContext context) {
+    return CharacteristicCardWidget(
+        svgPath: ProjectIcons.iRoof,
+        title: ProjectStrings.Roof,
+        info: roofInfo);
+  }
+}
+
+class _RepairCardWidget extends StatelessWidget {
+  const _RepairCardWidget({required this.repairInfo, Key? key})
+      : super(key: key);
+  final String repairInfo;
+
+  @override
+  Widget build(BuildContext context) {
+    return CharacteristicCardWidget(
+        svgPath: ProjectIcons.iRepair,
+        title: ProjectStrings.Repair,
+        info: repairInfo);
   }
 }
