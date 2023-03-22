@@ -7,7 +7,6 @@ class ImageCarouselWidget extends StatefulWidget {
   const ImageCarouselWidget({required this.images, Key? key}) : super(key: key);
   final List<String> images;
 
-
   @override
   State<ImageCarouselWidget> createState() => _ImageCarouselWidgetState();
 }
@@ -31,30 +30,33 @@ class _ImageCarouselWidgetState extends State<ImageCarouselWidget> {
         children: [
           CarouselSlider(
             options: CarouselOptions(
-              height: 235.h, viewportFraction: 1,
+              height: 235.h,
+              viewportFraction: 1,
               onPageChanged: onPageChange,
               enableInfiniteScroll: false,
             ),
             items: widget.images.map((image) {
               return Builder(
                 builder: (BuildContext context) {
-                  return
-                    Container(
-                      margin: EdgeInsets.symmetric(horizontal: 14.w),
-                      child: Image.asset(
-                        image,
-                        width: MediaQuery.of(context).size.width,
-                        height: 235.h,
-                        fit: BoxFit.fill,
-                      ),
-                    );
+                  return Container(
+                    margin: EdgeInsets.symmetric(horizontal: 14.w),
+                    child: Image.asset(
+                      image,
+                      width: MediaQuery.of(context).size.width,
+                      height: 235.h,
+                      fit: BoxFit.fill,
+                    ),
+                  );
                 },
               );
             }).toList(),
           ),
           Align(
             alignment: Alignment.bottomCenter,
-            child: AmountIndicatorWidget(currentValue: _current + 1, maxValue: widget.images.length,),
+            child: AmountIndicatorWidget(
+              currentValue: _current + 1,
+              maxValue: widget.images.length,
+            ),
           ),
         ],
       ),

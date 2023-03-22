@@ -1,12 +1,14 @@
 import 'package:basic_ui_impl_first_task/assets/strings/projects_strings.dart';
-import 'package:basic_ui_impl_first_task/assets/test_styles/project_styles.dart';
+import 'package:basic_ui_impl_first_task/assets/text_styles/project_styles.dart';
 import 'package:basic_ui_impl_first_task/basic_task/widgets/detailed_widget.dart';
 import 'package:basic_ui_impl_first_task/basic_task/widgets/product_card_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ProductDescWidget extends StatelessWidget {
-  const ProductDescWidget({Key? key}) : super(key: key);
+  const ProductDescWidget({required this.descriptionInfo, Key? key})
+      : super(key: key);
+  final String descriptionInfo;
 
   @override
   Widget build(BuildContext context) {
@@ -14,17 +16,23 @@ class ProductDescWidget extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SizedBox(height: 15.h,),
+          SizedBox(
+            height: 15.h,
+          ),
           Text(
             ProjectStrings.description,
-            style: ProjectStyles.boldBlack.copyWith(fontSize: 18.sp),
+            style: ProjectStyles.boldBlackOpenSans.copyWith(fontSize: 18.sp),
           ),
-          SizedBox(height: 11.h,),
+          SizedBox(
+            height: 11.h,
+          ),
           Text(
-            ProjectStrings.descText,
-            style: ProjectStyles.regularBlack.copyWith(fontSize: 12.sp),
+            descriptionInfo,
+            style: ProjectStyles.regularBlackOpenSans.copyWith(fontSize: 12.sp),
           ),
-          SizedBox(height: 7.h,),
+          SizedBox(
+            height: 7.h,
+          ),
           const DetailedWidget(),
         ],
       ),
