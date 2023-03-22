@@ -7,6 +7,7 @@ import 'package:basic_ui_impl_first_task/basic_task/widgets/product_card_widget.
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+/// виджет раздела характеристик продукта
 class ProductCharacteristicWidget extends StatelessWidget {
   const ProductCharacteristicWidget({
     required this.floorInfo,

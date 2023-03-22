@@ -2,6 +2,7 @@ import 'package:basic_ui_impl_first_task/assets/colors/project_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+/// виджет разделов продукта
 class ProductCardWidget extends StatelessWidget {
   const ProductCardWidget({required this.child, Key? key}) : super(key: key);
   final Widget child;

@@ -3,6 +3,7 @@ import 'package:basic_ui_impl_first_task/assets/text_styles/project_styles.dart'
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+/// индикатор показывающий какой предмет из коллекции выбран
 class AmountIndicatorWidget extends StatelessWidget {
   const AmountIndicatorWidget(
       {required this.currentValue, required this.maxValue, Key? key})

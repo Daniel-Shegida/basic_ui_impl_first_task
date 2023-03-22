@@ -3,6 +3,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+/// карусель с изображениями и индикатором
 class ImageCarouselWidget extends StatefulWidget {
   const ImageCarouselWidget({required this.images, Key? key}) : super(key: key);
   final List<String> images;

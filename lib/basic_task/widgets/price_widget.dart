@@ -2,6 +2,7 @@ import 'package:basic_ui_impl_first_task/assets/text_styles/project_styles.dart'
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+/// виджет отображающий цену продукта, регулируемый по цвету
 class PriceWidget extends StatelessWidget {
   const PriceWidget({
     required this.price,

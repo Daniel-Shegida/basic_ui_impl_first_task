@@ -6,8 +6,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+/// кнопка для перехода на авито
 class AvitoCardWidget extends StatelessWidget {
   AvitoCardWidget({Key? key}) : super(key: key);
+
+  /// т.к логики нет, можно сделать упрощенно
   final Uri _url = Uri.parse('https://www.avito.ru/');
 
   Future<void> _launchUrl() async {

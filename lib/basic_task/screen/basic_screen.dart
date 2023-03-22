@@ -12,6 +12,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg_icons/flutter_svg_icons.dart';
 
+/// основной экран проекта
 class BasicScreen extends StatelessWidget {
   const BasicScreen({Key? key}) : super(key: key);
 

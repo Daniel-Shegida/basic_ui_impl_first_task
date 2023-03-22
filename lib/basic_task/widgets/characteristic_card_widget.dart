@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg_icons/flutter_svg_icons.dart';
 
+/// карточка показывающая на одно из свойств продукта
 class CharacteristicCardWidget extends StatelessWidget {
   const CharacteristicCardWidget({
     required this.svgPath,

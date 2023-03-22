@@ -2,6 +2,7 @@ import 'package:basic_ui_impl_first_task/basic_task/screen/basic_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+/// иницилизация screenUtils и тем проекта
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 

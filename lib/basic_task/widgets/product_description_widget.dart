@@ -5,6 +5,7 @@ import 'package:basic_ui_impl_first_task/basic_task/widgets/product_card_widget.
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+/// виджет раздела описания продукта
 class ProductDescWidget extends StatelessWidget {
   const ProductDescWidget({required this.descriptionInfo, Key? key})
       : super(key: key);

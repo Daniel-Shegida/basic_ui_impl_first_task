@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg_icons/flutter_svg_icons.dart';
 
+/// виджет подробнее без отклика
 class DetailedWidget extends StatelessWidget {
   const DetailedWidget({Key? key}) : super(key: key);
 

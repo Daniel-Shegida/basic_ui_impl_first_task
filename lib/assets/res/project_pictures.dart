@@ -1,3 +1,4 @@
+/// изображения проекта (фото квартиры )
 abstract class ProjectPictures {
   /// PlacesScreen bottom name.
   static const List<String> fotoesExample = [

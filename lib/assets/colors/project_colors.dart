@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// Цветовые ресурсы проекта
 abstract class ProjectColors {
   static const Color textColorPrimary = _oxBlack;
   static const Color textColorSecondary = _oxGreyTr;

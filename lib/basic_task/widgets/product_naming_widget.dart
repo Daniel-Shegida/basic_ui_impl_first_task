@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg_icons/flutter_svg_icons.dart';
 
+/// виджет раздела названия продукта
 class ProductNamingWidget extends StatelessWidget {
   const ProductNamingWidget({
     required this.productNameInfo,
