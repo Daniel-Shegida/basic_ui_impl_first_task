@@ -1,16 +1,6 @@
-# basic_ui_impl_first_task
+# Basic level of First task. UI implementation
 
 The first task in UI implementation
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Результат на эмуляторе Pixel4 с разрешением 1080x2280
+![64](https://user-images.githubusercontent.com/47796424/227807072-759816cf-d9e6-4ec4-a88d-b845e2f9a074.gif)
