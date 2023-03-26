@@ -17,7 +17,6 @@ class MyApp extends StatelessWidget {
           useInheritedMediaQuery: true,
           theme: ThemeData(
             primarySwatch: Colors.blue,
-            // textTheme: Typography.englishLike2018.apply(fontSizeFactor: 1.sp),
           ),
           home: child,
         );
@@ -30,12 +29,11 @@ class MyApp extends StatelessWidget {
 class HomePage extends StatefulWidget {
   const HomePage({Key? key,}) : super(key: key);
 
-
   @override
   _HomePageState createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
   @override
-  Widget build(BuildContext context) => BasicScreen();
+  Widget build(BuildContext context) => const BasicScreen();
 }

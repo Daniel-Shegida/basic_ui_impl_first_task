@@ -17,23 +17,23 @@ abstract class ProjectStrings {
 
   static const String detailed = 'Подробнее';
 
-  static const String Offer = 'Предложение';
+  static const String offer = 'Предложение';
 
   static const String characterization = 'Характеристики';
 
   static const String aboutObject = 'Об объекте';
 
-  static const String Floor = 'Планировка';
+  static const String floor = 'Планировка';
 
-  static const String Roof = 'Высота потолков';
+  static const String roof = 'Высота потолков';
 
-  static const String Repair = 'Ремонт';
+  static const String repair = 'Ремонт';
 
-  static const String FloorExample = 'Смежная';
+  static const String floorExample = 'Смежная';
 
-  static const String RoofExample = 'От 2,5 м';
+  static const String roofExample = 'От 2,5 м';
 
-  static const String RepairExample = 'Без ремонта';
+  static const String repairExample = 'Без ремонта';
 
   static const String avito = 'Смотреть на Avito';
 }

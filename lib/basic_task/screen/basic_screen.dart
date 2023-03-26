@@ -97,9 +97,9 @@ class _BodyContentScrollColumn extends StatelessWidget {
             height: 10.h,
           ),
           const ProductCharacteristicWidget(
-            floorInfo: ProjectStrings.FloorExample,
-            roofInfo: ProjectStrings.RoofExample,
-            repairInfo: ProjectStrings.RepairExample,
+            floorInfo: ProjectStrings.floorExample,
+            roofInfo: ProjectStrings.roofExample,
+            repairInfo: ProjectStrings.repairExample,
           ),
           SizedBox(
             height: 10.h,

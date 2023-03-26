@@ -65,7 +65,7 @@ class _FloorCardWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return CharacteristicCardWidget(
       svgPath: ProjectIcons.iFloor,
-      title: ProjectStrings.Floor,
+      title: ProjectStrings.floor,
       info: floorInfo,
     );
   }
@@ -79,7 +79,7 @@ class _RoofCardWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return CharacteristicCardWidget(
         svgPath: ProjectIcons.iRoof,
-        title: ProjectStrings.Roof,
+        title: ProjectStrings.roof,
         info: roofInfo);
   }
 }
@@ -93,7 +93,7 @@ class _RepairCardWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return CharacteristicCardWidget(
         svgPath: ProjectIcons.iRepair,
-        title: ProjectStrings.Repair,
+        title: ProjectStrings.repair,
         info: repairInfo);
   }
 }
