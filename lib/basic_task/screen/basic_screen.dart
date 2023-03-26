@@ -21,71 +21,94 @@ class BasicScreen extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         backgroundColor: ProjectColors.backGroundColor,
-        appBar: AppBar(
-          centerTitle: true,
-          title: Text(
-            ProjectStrings.title,
-            style: ProjectStyles.boldBlackOpenSans.copyWith(fontSize: 17.sp),
+        appBar: _WhiteAppBarWithActions(),
+        body: const _BodyContentScrollColumn(),
+      ),
+    );
+  }
+}
+
+class _WhiteAppBarWithActions extends StatelessWidget with PreferredSizeWidget{
+  const _WhiteAppBarWithActions({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return AppBar(
+      centerTitle: true,
+      title: Text(
+        ProjectStrings.title,
+        style: ProjectStyles.boldBlackOpenSans.copyWith(fontSize: 17.sp),
+      ),
+      backgroundColor: ProjectColors.backGroundCardColor,
+      elevation: 0,
+      actions: [
+        const SvgIcon(
+          icon: SvgIconData(
+            ProjectIcons.iUpload,
           ),
-          backgroundColor: ProjectColors.backGroundCardColor,
-          elevation: 0,
-          actions: [
-            const SvgIcon(
-              icon: SvgIconData(
-                ProjectIcons.iUpload,
-              ),
-              color: ProjectColors.iconColor,
-            ),
-            SizedBox(
-              width: 16.9.w,
-            ),
-            const SvgIcon(
-              icon: SvgIconData(
-                ProjectIcons.iDots,
-              ),
-              color: ProjectColors.iconColor,
-            ),
-            SizedBox(
-              width: 13.w,
-            )
-          ],
+          color: ProjectColors.iconColor,
         ),
-        body: SingleChildScrollView(
-            child: Column(
-          children: [
-            const ImageCarouselWidget(
-              images: ProjectPictures.fotoesExample,
-            ),
-            const ProductNamingWidget(
-              productNameInfo: ProjectStrings.productName,
-              placeInfo: ProjectStrings.place,
-              price: ProjectStrings.price,
-              priceSign: ProjectStrings.priceSign,
-              priceColor: ProjectColors.sellingColor,
-            ),
-            SizedBox(
-              height: 10.h,
-            ),
-            const ProductDescWidget(
-              descriptionInfo: ProjectStrings.descText,
-            ),
-            SizedBox(
-              height: 10.h,
-            ),
-            const ProductCharacteristicWidget(
-              floorInfo: ProjectStrings.FloorExample,
-              roofInfo: ProjectStrings.RoofExample,
-              repairInfo: ProjectStrings.RepairExample,
-            ),
-            SizedBox(
-              height: 10.h,
-            ),
-            AvitoCardWidget(),
-            SizedBox(
-              height: 16.h,
-            ),
-          ],
-        )),
+        SizedBox(
+          width: 16.9.w,
+        ),
+        const SvgIcon(
+          icon: SvgIconData(
+            ProjectIcons.iDots,
+          ),
+          color: ProjectColors.iconColor,
+        ),
+        SizedBox(
+          width: 13.w,
+        )
+      ],
+    );
+  }
+
+  @override
+  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
+}
+
+
+class _BodyContentScrollColumn extends StatelessWidget {
+  const _BodyContentScrollColumn({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          const ImageCarouselWidget(
+            images: ProjectPictures.fotoesExample,
+          ),
+          const ProductNamingWidget(
+            productNameInfo: ProjectStrings.productName,
+            placeInfo: ProjectStrings.place,
+            price: ProjectStrings.price,
+            priceSign: ProjectStrings.priceSign,
+            priceColor: ProjectColors.sellingColor,
+          ),
+          SizedBox(
+            height: 10.h,
+          ),
+          const ProductDescWidget(
+            descriptionInfo: ProjectStrings.descText,
+          ),
+          SizedBox(
+            height: 10.h,
+          ),
+          const ProductCharacteristicWidget(
+            floorInfo: ProjectStrings.FloorExample,
+            roofInfo: ProjectStrings.RoofExample,
+            repairInfo: ProjectStrings.RepairExample,
+          ),
+          SizedBox(
+            height: 10.h,
+          ),
+          AvitoCardWidget(),
+          SizedBox(
+            height: 16.h,
+          ),
+        ],
       ),
     );
   }

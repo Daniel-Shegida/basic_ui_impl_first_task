@@ -7,7 +7,8 @@ abstract class ProjectStyles {
   static const TextStyle boldBlackOpenSans = TextStyle(
       fontFamily: 'OpenSans',
       fontWeight: FontWeight.bold,
-      color: ProjectColors.textColorPrimary);
+      color: ProjectColors.textColorPrimary,
+  );
 
   static const TextStyle boldBlack = TextStyle(
       fontWeight: FontWeight.bold, color: ProjectColors.textColorPrimary);
