@@ -18,11 +18,11 @@ class BasicScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
+    return const SafeArea(
       child: Scaffold(
         backgroundColor: ProjectColors.backGroundColor,
         appBar: _WhiteAppBarWithActions(),
-        body: const _BodyContentScrollColumn(),
+        body: _BodyContentScrollColumn(),
       ),
     );
   }
